@@ -46,7 +46,7 @@
         }
         
         .hero {
-            background-image: url('images/IMG_2490.png');
+            background-image: url('https://i.imgur.com/nJequL4.png');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -265,10 +265,10 @@
                 <a href="#order" class="cta-button">הזמן עכשיו!</a>
             </div>
             <div class="product-images">
-                <img src="images/IMG_2491.png" alt="מתקן היין עם בקבוקים">
-                <img src="images/IMG_2492.png" alt="מתקן היין מזווית אחרת">
-                <img src="images/IMG_2488.png" alt="מתקן היין מקרוב">
-                <img src="images/IMG_2489.png" alt="מתקן היין במבט כולל">
+                <img src="https://i.imgur.com/2pcMu3a.png" alt="מתקן היין עם בקבוקים">
+                <img src="https://i.imgur.com/6aU9JKh.png" alt="מתקן היין מזווית אחרת">
+                <img src="https://i.imgur.com/wprbcP7.png" alt="מתקן היין מקרוב">
+                <img src="https://i.imgur.com/aJpRess.png" alt="מתקן היין במבט כולל">
             </div>
         </div>
         
