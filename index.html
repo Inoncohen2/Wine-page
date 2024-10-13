@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4-Wine v.2 - מתקן יין תלוי מעץ</title>
+    <title>מתקן עץ ליינות וכוסות</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         
@@ -256,6 +256,8 @@
             display: block;
             width: 80%;
             max-width: 700px;
+            max-height: 80%;
+            object-fit: contain;
         }
 
         .close {
@@ -299,12 +301,12 @@
 </head>
 <body>
     <header>
-        <h1>4-Wine v.2 מתקן יין תלוי מעץ</h1>
+        <h1>מתקן עץ ליינות וכוסות</h1>
     </header>
     <div class="hero">
         <div class="hero-content">
             <h2>עצב את המטבח שלך עם סטייל</h2>
-            <p>מתקן יין מעוצב לקיר, המשלב פונקציונליות ואסתטיקה</p>
+            <p>מתקן עץ מעוצב לקיר, המשלב פונקציונליות ואסתטיקה לאחסון יינות וכוסות</p>
             <div class="price-tag">₪299</div>
             <a href="#order" class="cta-button">הזמן עכשיו!</a>
         </div>
@@ -313,12 +315,12 @@
         <div class="product-info">
             <div class="product-details">
                 <h3>על המוצר</h3>
-                <p>4-Wine v.2 הוא מתקן יין תלוי מעץ, המעוצב במיוחד עבור אוהבי יין שמחפשים פתרון אחסון יצירתי ומרשים. מתקן זה משלב פונקציונליות מעולה עם עיצוב מודרני, המוסיף נגיעה של יוקרה לכל מטבח או פינת אוכל.</p>
+                <p>המתקן עץ ליינות וכוסות הוא פתרון אחסון יצירתי ומרשים, המעוצב במיוחד עבור אוהבי יין. מתקן זה משלב פונקציונליות מעולה עם עיצוב מודרני, המוסיף נגיעה של יוקרה לכל מטבח או פינת אוכל.</p>
                 <div class="features">
                     <h3>יתרונות המוצר:</h3>
                     <ul>
                         <li>עיצוב מודרני ואלגנטי המתאים לכל סגנון פנים</li>
-                        <li>יכולת אחסון של 4 בקבוקי יין בצורה בטוחה ונוחה</li>
+                        <li>יכולת אחסון של 4 בקבוקי יין וכוסות בצורה בטוחה ונוחה</li>
                         <li>עשוי מעץ אלון מלא, המבטיח עמידות לאורך זמן</li>
                         <li>קל להתקנה וחוסך מקום על הקיר</li>
                         <li>מושלם כמתנה לאוהבי יין או לחנוכת בית</li>
@@ -331,26 +333,30 @@
                 <a href="#order" class="cta-button">הזמן עכשיו!</a>
             </div>
             <div class="product-images">
-                <img src="https://i.imgur.com/2pcMu3a.png" alt="מתקן היין עם בקבוקים" onclick="openModal(this.src)">
-                <img src="https://i.imgur.com/6aU9JKh.png" alt="מתקן היין מזווית אחרת" onclick="openModal(this.src)">
-                <img src="https://i.imgur.com/wprbcP7.png" alt="מתקן היין מקרוב" onclick="openModal(this.src)">
-                <img src="https://i.imgur.com/aJpRess.png" alt="מתקן היין במבט כולל" onclick="openModal(this.src)">
+                <img src="https://i.imgur.com/2pcMu3a.png" alt="מתקן היין והכוסות עם בקבוקים" onclick="openModal(this.src)">
+                <img src="https://i.imgur.com/6aU9JKh.png" alt="מתקן היין והכוסות מזווית אחרת" onclick="openModal(this.src)">
+                <img src="https://i.imgur.com/wprbcP7.png" alt="מתקן היין והכוסות מקרוב" onclick="openModal(this.src)">
+                <img src="https://i.imgur.com/aJpRess.png" alt="מתקן היין והכוסות במבט כולל" onclick="openModal(this.src)">
             </div>
         </div>
         
         <div class="size-demo">
             <h3>מידות המוצר</h3>
-            <svg viewBox="0 0 100 200">
-                <path d="M30 0 h40 v40 h30 v20 h-30 v40 h30 v20 h-30 v40 h30 v20 h-30 v20 h-40 v-20 h-30 v-20 h30 v-40 h-30 v-20 h30 v-40 h-30 v-20 h30 z" 
-                      fill="none" stroke="black" stroke-width="2"/>
-                <text x="15" y="100" fill="#8B4513" font-size="10" transform="rotate(-90 15,100)">95 ס"מ</text>
-                <text x="50" y="195" fill="#8B4513" font-size="10">35 ס"מ</text>
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="50" y="20" width="200" height="160" fill="none" stroke="#8B4513" stroke-width="2"/>
+                <line x1="0" y1="20" x2="50" y2="20" stroke="#8B4513" stroke-width="1"/>
+                <line x1="0" y1="180" x2="50" y2="180" stroke="#8B4513" stroke-width="1"/>
+                <text x="25" y="110" fill="#8B4513" font-size="14" text-anchor="middle" transform="rotate(-90 25,110)">95 ס"מ</text>
+                <line x1="50" y1="0" x2="50" y2="20" stroke="#8B4513" stroke-width="1"/>
+                <line x1="250" y1="0" x2="250" y2="20" stroke="#8B4513" stroke-width="1"/>
+                <text x="150" y="15" fill="#8B4513" font-size="14" text-anchor="middle">35 ס"מ</text>
+                <text x="150" y="100" fill="#8B4513" font-size="14" text-anchor="middle">מתקן עץ ליינות וכוסות</text>
             </svg>
-            <p>מתקן יין תלוי עם 4 מדפים, גובה: 95 ס"מ, רוחב: 35 ס"מ</p>
+            <p>מתקן עץ ליינות וכוסות עם 4 מדפים, גובה: 95 ס"מ, רוחב: 35 ס"מ</p>
         </div>
 
         <div class="video-demo">
-            <h3>צפו במתקן היין בפעולה</h3>
+            <h3>צפו במתקן היין והכוסות בפעולה</h3>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
@@ -364,12 +370,12 @@
 ‏    </a>
 
 ‏    <div id="imageModal" class="modal">
-‏        <span class="close" onclick="closeModal()">&times;</span>
+‏        <span class="close">&times;</span>
 ‏        <img class="modal-content" id="modalImg">
 ‏    </div>
 
 ‏    <footer class="footer">
-‏        <p>כל הזכויות שמורות &copy; 2024 4-Wine v.2</p>
+‏        <p>כל הזכויות שמורות &copy; 2024 מתקן עץ ליינות וכוסות</p>
 ‏    </footer>
 
 ‏    <script>
@@ -380,12 +386,14 @@
 ‏            modalImg.src = imgSrc;
         }
 
-‏        function closeModal() {
-‏            document.getElementById("imageModal").style.display = "none";
+‏        var modal = document.getElementById("imageModal");
+‏        var span = document.getElementsByClassName("close")[0];
+
+‏        span.onclick = function() {
+‏            modal.style.display = "none";
         }
 
 ‏        window.onclick = function(event) {
-‏            var modal = document.getElementById("imageModal");
 ‏            if (event.target == modal) {
 ‏                modal.style.display = "none";
             }
