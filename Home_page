@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-Wine v.2 - מתקן יין תלוי מעץ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #A0522D;
+            --accent-color: #D2691E;
+            --background-color: #FFF8DC;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Heebo', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        
+        .hero {
+            background-image: url('images/IMG_2490.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            z-index: 2;
+            text-align: center;
+            max-width: 600px;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .product-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
+        
+        .product-details, .product-images {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .product-images img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-images img:hover {
+            transform: scale(1.05);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .price-tag {
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .features {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .features h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        
+        .features li::before {
+            content: '✓';
+            color: var(--accent-color);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+        .video-demo {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .product-info {
+                flex-direction: column;
+            }
+            .hero-content {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>4-Wine v.2 מתקן יין תלוי מעץ</h1>
+    </header>
+    <div class="hero">
+        <div class="hero-content">
+            <h2>עצב את המטבח שלך עם סטייל</h2>
+            <p>מתקן יין מעוצב לקיר, המשלב פונקציונליות ואסתטיקה</p>
+            <div class="price-tag">₪299</div>
+            <a href="#order" class="cta-button">הזמן עכשיו!</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product-info">
+            <div class="product-details">
+                <h3>על המוצר</h3>
+                <p>4-Wine v.2 הוא מתקן יין תלוי מעץ, המעוצב במיוחד עבור אוהבי יין שמחפשים פתרון אחסון יצירתי ומרשים. מתקן זה משלב פונקציונליות מעולה עם עיצוב מודרני, המוסיף נגיעה של יוקרה לכל מטבח או פינת אוכל.</p>
+                <div class="features">
+                    <h3>יתרונות המוצר:</h3>
+                    <ul>
+                        <li>עיצוב מודרני ואלגנטי המתאים לכל סגנון פנים</li>
+                        <li>יכולת אחסון של 4 בקבוקי יין בצורה בטוחה ונוחה</li>
+                        <li>עשוי מעץ אלון מלא, המבטיח עמידות לאורך זמן</li>
+                        <li>קל להתקנה וחוסך מקום על הקיר</li>
+                        <li>מושלם כמתנה לאוהבי יין או לחנוכת בית</li>
+                    </ul>
+                </div>
+                <h3>פרטי הזמנה</h3>
+                <p>מחיר: ₪299 כולל משלוח חינם לכל הארץ</p>
+                <p>זמן אספקה: 3-5 ימי עסקים</p>
+                <p>אחריות: שנה על כל פגם ייצור</p>
+                <a href="#order" class="cta-button">הזמן עכשיו!</a>
+            </div>
+            <div class="product-images">
+                <img src="images/IMG_2491.png" alt="מתקן היין עם בקבוקים">
+                <img src="images/IMG_2492.png" alt="מתקן היין מזווית אחרת">
+                <img src="images/IMG_2488.png" alt="מתקן היין מקרוב">
+                <img src="images/IMG_2489.png" alt="מתקן היין במבט כולל">
+            </div>
+        </div>
+        
+        <div class="video-demo">
+            <h3>צפו במתקן היין בפעולה</h3>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <a href="https://wa.me/972XXXXXXXXX" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+</body>
+</html>
