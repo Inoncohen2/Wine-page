@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מתקן עץ ליינות וכוסות</title>
+    <title>מתקן עץ ליינות וכוסות - עיצוב מודרני למטבח שלך</title>
+    <meta name="description" content="מתקן עץ מעוצב לקיר, המשלב פונקציונליות ואסתטיקה לאחסון יינות וכוסות. הוסף סטייל למטבח שלך עם המתקן המושלם!">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
         
@@ -40,8 +41,33 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
         }
         
         h1, h2, h3 {
@@ -278,12 +304,69 @@
             cursor: pointer;
         }
         
+        .testimonials {
+            background-color: #fff;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .faq {
+            margin-top: 2rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        
         .footer {
             background-color: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
+        }
+        
+        .social-icons {
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
         }
         
         @media (max-width: 768px) {
@@ -296,16 +379,31 @@
             h1 {
                 font-size: 2rem;
             }
+            header {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+            }
         }
     </style>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>מתקן עץ ליינות וכוסות</h1>
+        <div class="logo">מתקן עץ ליינות וכוסות</div>
+        <nav>
+            <ul>
+                <li><a href="#features">יתרונות</a></li>
+                <li><a href="#gallery">גלריה</a></li>
+                <li><a href="#testimonials">המלצות</a></li>
+                <li><a href="#faq">שאלות נפוצות</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="hero">
         <div class="hero-content">
-            <h2>עצב את המטבח שלך עם סטייל</h2>
+            <h1>עצב את המטבח שלך עם סטייל</h1>
             <p>מתקן עץ מעוצב לקיר, המשלב פונקציונליות ואסתטיקה לאחסון יינות וכוסות</p>
             <div class="price-tag">₪299</div>
             <a href="#order" class="cta-button">הזמן עכשיו!</a>
@@ -314,9 +412,9 @@
     <div class="container">
         <div class="product-info">
             <div class="product-details">
-                <h3>על המוצר</h3>
+                <h2>על המוצר</h2>
                 <p>המתקן עץ ליינות וכוסות הוא פתרון אחסון יצירתי ומרשים, המעוצב במיוחד עבור אוהבי יין. מתקן זה משלב פונקציונליות מעולה עם עיצוב מודרני, המוסיף נגיעה של יוקרה לכל מטבח או פינת אוכל.</p>
-                <div class="features">
+                <div id="features" class="features">
                     <h3>יתרונות המוצר:</h3>
                     <ul>
                         <li>עיצוב מודרני ואלגנטי המתאים לכל סגנון פנים</li>
@@ -329,10 +427,10 @@
                 <h3>פרטי הזמנה</h3>
                 <p>מחיר: ₪299 כולל משלוח חינם לכל הארץ</p>
                 <p>זמן אספקה: 3-5 ימי עסקים</p>
-                <p>אחריות: שנה על כל פגם ייצור</p>
+<p>אחריות: שנה על כל פגם ייצור</p>
                 <a href="#order" class="cta-button">הזמן עכשיו!</a>
             </div>
-            <div class="product-images">
+            <div id="gallery" class="product-images">
                 <img src="https://i.imgur.com/2pcMu3a.png" alt="מתקן היין והכוסות עם בקבוקים" onclick="openModal(this.src)">
                 <img src="https://i.imgur.com/6aU9JKh.png" alt="מתקן היין והכוסות מזווית אחרת" onclick="openModal(this.src)">
                 <img src="https://i.imgur.com/wprbcP7.png" alt="מתקן היין והכוסות מקרוב" onclick="openModal(this.src)">
@@ -361,12 +459,34 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
+
+        <div id="testimonials" class="testimonials">
+            <h3>מה הלקוחות שלנו אומרים</h3>
+            <div class="testimonial">
+                <p>"המתקן הזה שדרג את המטבח שלי ברמות! אני מאוד מרוצה מהאיכות והעיצוב."</p>
+                <p class="testimonial-author">- דנה כ.</p>
+            </div>
+            <div class="testimonial">
+                <p>"קיבלתי את המתקן כמתנה לחנוכת הבית, וזו ללא ספק המתנה הכי שימושית ויפה שקיבלתי!"</p>
+                <p class="testimonial-author">- יוסי ל.</p>
+            </div>
+        </div>
+
+        <div id="faq" class="faq">
+            <h3>שאלות נפוצות</h3>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">האם המתקן מגיע מורכב?</div>
+                <div class="faq-answer">המתקן מגיע מורכב וכולל את כל האביזרים הדרושים להתקנה על הקיר.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">האם ניתן להזמין את המתקן בצבעים שונים?</div>
+                <div class="faq-answer">כרגע המתקן זמין בגוון טבעי של עץ האלון. אנו שוקלים להוסיף צבעים נוספים בעתיד.</div>
+            </div>
+        </div>
     </div>
     
     <a href="https://wa.me/972509057600" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
+        <i class="fab fa-whatsapp"></i>
     </a>
 
     <div id="imageModal" class="modal">
@@ -376,6 +496,11 @@
 
     <footer class="footer">
         <p>כל הזכויות שמורות &copy; 2024 מתקן עץ ליינות וכוסות</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+        </div>
     </footer>
 
     <script>
@@ -396,6 +521,15 @@
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+            }
+        }
+
+        function toggleAnswer(question) {
+            var answer = question.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
             }
         }
     </script>
