@@ -123,29 +123,29 @@
         
         .product-info {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 2rem;
+            flex-direction: column;
             gap: 2rem;
+            margin-top: 2rem;
         }
         
-        .product-details, .product-images {
-            flex: 1;
-            min-width: 300px;
+        .product-details, .product-images, .product-pricing {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         
         .product-images {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
         }
         
         .product-images img {
             width: 100%;
-            height: 150px;
+            height: 200px;
             object-fit: cover;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
             cursor: pointer;
         }
@@ -189,11 +189,7 @@
         }
         
         .features {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 2rem;
             margin-top: 2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         
         .features h3 {
@@ -222,93 +218,15 @@
             top: 0;
         }
         
-        .video-demo {
+        .size-demo {
             margin-top: 2rem;
-            text-align: center;
         }
         
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25D366;
-            color: #fff;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            text-align: center;
-            line-height: 60px;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.9);
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            max-height: 80%;
-            object-fit: contain;
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        .testimonials {
+        .testimonials, .faq {
+            margin-top: 2rem;
             background-color: #fff;
-            padding: 2rem;
-            margin-top: 2rem;
             border-radius: 10px;
+            padding: 2rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         
@@ -322,10 +240,6 @@
         .testimonial-author {
             font-weight: bold;
             color: var(--primary-color);
-        }
-        
-        .faq {
-            margin-top: 2rem;
         }
         
         .faq-item {
@@ -370,9 +284,6 @@
         }
         
         @media (max-width: 768px) {
-            .product-info {
-                flex-direction: column;
-            }
             .hero-content {
                 padding: 1rem;
             }
@@ -394,27 +305,28 @@
         <div class="logo">מתקן עץ ליינות וכוסות</div>
         <nav>
             <ul>
-                <li><a href="#features">יתרונות</a></li>
+                <li><a href="#product-info">מידע על המוצר</a></li>
                 <li><a href="#gallery">גלריה</a></li>
+                <li><a href="#pricing">מחיר והזמנה</a></li>
                 <li><a href="#testimonials">המלצות</a></li>
-                <li><a href="#faq">שאלות נפוצות</a></li>
             </ul>
         </nav>
     </header>
+    
     <div class="hero">
         <div class="hero-content">
             <h1>עצב את המטבח שלך עם סטייל</h1>
             <p>מתקן עץ מעוצב לקיר, המשלב פונקציונליות ואסתטיקה לאחסון יינות וכוסות</p>
-            <div class="price-tag">₪299</div>
-            <a href="#order" class="cta-button">הזמן עכשיו!</a>
+            <a href="#pricing" class="cta-button">גלה עוד</a>
         </div>
     </div>
+    
     <div class="container">
-        <div class="product-info">
+        <div id="product-info" class="product-info">
             <div class="product-details">
                 <h2>על המוצר</h2>
                 <p>המתקן עץ ליינות וכוסות הוא פתרון אחסון יצירתי ומרשים, המעוצב במיוחד עבור אוהבי יין. מתקן זה משלב פונקציונליות מעולה עם עיצוב מודרני, המוסיף נגיעה של יוקרה לכל מטבח או פינת אוכל.</p>
-                <div id="features" class="features">
+                <div class="features">
                     <h3>יתרונות המוצר:</h3>
                     <ul>
                         <li>עיצוב מודרני ואלגנטי המתאים לכל סגנון פנים</li>
@@ -424,39 +336,43 @@
                         <li>מושלם כמתנה לאוהבי יין או לחנוכת בית</li>
                     </ul>
                 </div>
-                <h3>פרטי הזמנה</h3>
-                <p>מחיר: ₪299 כולל משלוח חינם לכל הארץ</p>
-                <p>זמן אספקה: 3-5 ימי עסקים</p>
-<p>אחריות: שנה על כל פגם ייצור</p>
-                <a href="#order" class="cta-button">הזמן עכשיו!</a>
             </div>
+            
             <div id="gallery" class="product-images">
                 <img src="https://i.imgur.com/2pcMu3a.png" alt="מתקן היין והכוסות עם בקבוקים" onclick="openModal(this.src)">
                 <img src="https://i.imgur.com/6aU9JKh.png" alt="מתקן היין והכוסות מזווית אחרת" onclick="openModal(this.src)">
                 <img src="https://i.imgur.com/wprbcP7.png" alt="מתקן היין והכוסות מקרוב" onclick="openModal(this.src)">
                 <img src="https://i.imgur.com/aJpRess.png" alt="מתקן היין והכוסות במבט כולל" onclick="openModal(this.src)">
             </div>
-        </div>
-        
-        <div class="size-demo">
-            <h3>מידות המוצר</h3>
-            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                <rect x="50" y="20" width="200" height="160" fill="none" stroke="#8B4513" stroke-width="2"/>
-                <line x1="0" y1="20" x2="50" y2="20" stroke="#8B4513" stroke-width="1"/>
-                <line x1="0" y1="180" x2="50" y2="180" stroke="#8B4513" stroke-width="1"/>
-                <text x="25" y="110" fill="#8B4513" font-size="14" text-anchor="middle" transform="rotate(-90 25,110)">95 ס"מ</text>
-                <line x1="50" y1="0" x2="50" y2="20" stroke="#8B4513" stroke-width="1"/>
-                <line x1="250" y1="0" x2="250" y2="20" stroke="#8B4513" stroke-width="1"/>
-                <text x="150" y="15" fill="#8B4513" font-size="14" text-anchor="middle">35 ס"מ</text>
-                <text x="150" y="100" fill="#8B4513" font-size="14" text-anchor="middle">מתקן עץ ליינות וכוסות</text>
-            </svg>
-            <p>מתקן עץ ליינות וכוסות עם 4 מדפים, גובה: 95 ס"מ, רוחב: 35 ס"מ</p>
-        </div>
-
-        <div class="video-demo">
-            <h3>צפו במתקן היין והכוסות בפעולה</h3>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            
+            <div class="product-details">
+                <h3>מפרט טכני</h3>
+                <p>המתקן מיוצר מעץ אלון מלא באיכות גבוהה, עם גימור טבעי המדגיש את היופי הטבעי של העץ. הוא מתוכנן לתמוך בבטחה במשקל של עד 4 בקבוקי יין ו-4 זוגות של כוסות יין.</p>
+                <p>המתקן מגיע עם כל האביזרים הדרושים להתקנה על הקיר, כולל ברגים ועוגנים מתאימים. ההתקנה פשוטה ויכולה להתבצע בקלות על ידי כל אדם עם כלי עבודה בסיסיים.</p>
+            </div>
+            
+            <div id="pricing" class="product-pricing">
+                <h3>מחיר והזמנה</h3>
+                <div class="price-tag">₪299</div>
+                <p>המחיר כולל משלוח חינם לכל הארץ</p>
+                <p>זמן אספקה: 3-5 ימי עסקים</p>
+                <p>אחריות: שנה על כל פגם ייצור</p>
+                <a href="#order" class="cta-button">הזמן עכשיו!</a>
+            </div>
+            
+            <div class="size-demo">
+                <h3>מידות המוצר</h3>
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="20" width="200" height="160" fill="none" stroke="#8B4513" stroke-width="2"/>
+                    <line x1="0" y1="20" x2="50" y2="20" stroke="#8B4513" stroke-width="1"/>
+                    <line x1="0" y1="180" x2="50" y2="180" stroke="#8B4513" stroke-width="1"/>
+                    <text x="25" y="110" fill="#8B4513" font-size="14" text-anchor="middle" transform="rotate(-90 25,110)">95 ס"מ</text>
+                    <line x1="50" y1="0" x2="50" y2="20" stroke="#8B4513" stroke-width="1"/>
+                    <line x1="250" y1="0" x2="250" y2="20" stroke="#8B4513" stroke-width="1"/>
+                    <text x="150" y="15" fill="#8B4513" font-size="14" text-anchor="middle">35 ס"מ</text>
+                    <text x="150" y="100" fill="#8B4513" font-size="14" text-anchor="middle">מתקן עץ ליינות וכוסות</text>
+                </svg>
+                <p>מתקן עץ ליינות וכוסות עם 4 מדפים, גובה: 95 ס"מ, רוחב: 35 ס"מ</p>
             </div>
         </div>
 
@@ -472,7 +388,7 @@
             </div>
         </div>
 
-        <div id="faq" class="faq">
+        <div class="faq">
             <h3>שאלות נפוצות</h3>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleAnswer(this)">האם המתקן מגיע מורכב?</div>
